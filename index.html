@@ -1,277 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dean Shein — Copywriter</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; }
+File
+Work
+About
+DEAN SHEIN.
+COPYWRITER.
+NEW YORK.
+Ogilvy  —  VML  —  Wunderman Thompson  |  Sydney → New York  |  5 Years
+I wanted to be a rapper but mum said 'nah'. Now I'm a copywriter who performs stand-up, writes kids books, and hates Microsoft Excel.
+📁 Selected Work
+#	Client	Campaign	Status
+01	Visit Canberra	There's More Than They're Telling Us	LIVE
+02	Starbucks	The Superstar of Coffee	Concept
+03	KitKat	KitStops	Concept
+04	Allen's	Leapfrog	Concept
+05	Vanish	Pencil Eraser Poster	Concept
+06	Chobani	Weirderful	Concept
+07	Uber Eats	Foodio Give-Me	Concept
+08	Burger King	The Whopping Truth	Concept
+💾 About Dean
+Copywriter. 5 years. Stand-up comedian. Kids book writer. Recovering ad nerd.
 
-    .desktop { min-height: 100vh; background: #008080; padding: 12px; }
+Honed at Ogilvy, VML, and Wunderman Thompson in Sydney. Now open for work in New York.
 
-    .taskbar { position: fixed; bottom: 0; left: 0; right: 0; height: 36px; background: #c0c0c0; border-top: 2px solid #fff; display: flex; align-items: center; padding: 0 4px; gap: 4px; z-index: 100; }
-    .start-btn { height: 26px; padding: 0 8px; background: #c0c0c0; border-top: 2px solid #fff; border-left: 2px solid #fff; border-bottom: 2px solid #444; border-right: 2px solid #444; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 4px; }
-    .taskbar-divider { width: 1px; background: #888; height: 24px; margin: 0 4px; }
-    .taskbar-btn { height: 26px; padding: 0 10px; background: #c0c0c0; border-top: 2px solid #fff; border-left: 2px solid #fff; border-bottom: 2px solid #444; border-right: 2px solid #444; font-size: 11px; cursor: pointer; }
-    .taskbar-btn.active { border-top: 2px solid #444; border-left: 2px solid #444; border-bottom: 2px solid #fff; border-right: 2px solid #fff; background: #b0b0b0; }
-    .taskbar-clock { margin-left: auto; font-size: 11px; padding: 0 8px; border: 1px inset #888; height: 26px; display: flex; align-items: center; }
-
-    .window { background: #c0c0c0; border-top: 2px solid #fff; border-left: 2px solid #fff; border-bottom: 2px solid #444; border-right: 2px solid #444; margin-bottom: 80px; display: none; }
-    .window.active { display: block; }
-
-    .title-bar { background: #000080; color: #fff; font-size: 12px; font-weight: bold; padding: 3px 6px; display: flex; justify-content: space-between; align-items: center; user-select: none; }
-    .title-bar-btns { display: flex; gap: 2px; }
-    .title-bar-btn { width: 16px; height: 14px; background: #c0c0c0; border-top: 1px solid #fff; border-left: 1px solid #fff; border-bottom: 1px solid #444; border-right: 1px solid #444; font-size: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #000; font-weight: bold; }
-
-    .menu-bar { background: #c0c0c0; padding: 2px 4px; display: flex; gap: 0; border-bottom: 1px solid #888; }
-    .menu-item { font-size: 12px; padding: 2px 8px; cursor: pointer; color: #000; }
-    .menu-item:hover { background: #000080; color: #fff; }
-
-    .window-body { padding: 16px; }
-    .scroll-area { max-height: 80vh; overflow-y: auto; }
-
-    .home-header { border: 2px inset #888; background: #fff; padding: 20px; margin-bottom: 12px; }
-    .home-title { font-weight: bold; line-height: 1.05; font-family: 'Arial Black', Arial, sans-serif; letter-spacing: -1px; }
-    .home-title .line1 { font-size: clamp(24px, 4vw, 42px); color: #000; display: block; }
-    .home-title .line2 { font-size: clamp(24px, 4vw, 42px); color: #008080; display: block; }
-    .home-title .line3 { font-size: clamp(24px, 4vw, 42px); color: #000080; display: block; }
-    .home-sub { font-size: 11px; color: #444; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
-    .home-quote { font-size: 13px; font-style: italic; color: #000; margin-top: 12px; padding: 8px; background: #ffffcc; border: 1px solid #888; }
-
-    .work-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 4px; }
-    .work-table thead tr { background: #000080; color: #fff; }
-    .work-table th { padding: 4px 8px; text-align: left; font-weight: bold; font-size: 11px; }
-    .work-table td { padding: 5px 8px; border-bottom: 1px solid #c0c0c0; color: #000; }
-    .work-table tr:nth-child(even) td { background: #e8e8e8; }
-    .work-table tbody tr:hover td { background: #000080; color: #fff; cursor: pointer; }
-    .live-badge { background: #008000; color: #fff; font-size: 10px; padding: 1px 5px; font-weight: bold; }
-
-    .panel-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .panel { border: 2px inset #888; background: #fff; padding: 12px; }
-    .panel-title { font-size: 11px; font-weight: bold; text-transform: uppercase; background: #000080; color: #fff; padding: 2px 6px; margin-bottom: 8px; }
-    .panel-body { font-size: 12px; line-height: 1.7; color: #000; }
-
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .info-row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #ccc; font-size: 12px; }
-    .info-label { color: #444; }
-    .info-value { font-weight: bold; }
-
-    .video-wrap { position: relative; width: 100%; padding-bottom: 56.25%; background: #000; border: 2px inset #888; }
-    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-    .mccain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-    @media (max-width: 600px) {
-      .panel-row, .about-grid, .mccain-grid { grid-template-columns: 1fr; }
-      .taskbar-btn { padding: 0 6px; font-size: 10px; }
-    }
-  </style>
-</head>
-<body>
-
-<div class="desktop">
-
-  <!-- HOME -->
-  <div class="window active" id="win-home">
-    <div class="title-bar">
-      <span>📄 Dean Shein — Copywriter</span>
-      <div class="title-bar-btns"><div class="title-bar-btn">_</div><div class="title-bar-btn">□</div><div class="title-bar-btn">✕</div></div>
-    </div>
-    <div class="menu-bar">
-      <span class="menu-item" onclick="showWin('home')">File</span>
-      <span class="menu-item" onclick="showWin('work')">Work</span>
-      <span class="menu-item" onclick="showWin('mccain')">McCain</span>
-      <span class="menu-item" onclick="showWin('tropfest')">Tropfest</span>
-      <span class="menu-item" onclick="showWin('about')">About</span>
-    </div>
-    <div class="window-body scroll-area">
-      <div class="home-header">
-        <div class="home-title">
-          <span class="line1">DEAN SHEIN.</span>
-          <span class="line2">COPYWRITER.</span>
-          <span class="line3">NEW YORK.</span>
-        </div>
-        <div class="home-sub">Ogilvy &nbsp;—&nbsp; VML &nbsp;—&nbsp; Wunderman Thompson &nbsp;|&nbsp; Sydney → New York &nbsp;|&nbsp; 5 Years</div>
-        <div class="home-quote">Ideas that leave your brain screaming 'error 404'.</div>
-      </div>
-      <div class="panel-row">
-        <div class="panel">
-          <div class="panel-title">📁 Selected Work</div>
-          <table class="work-table">
-            <thead><tr><th>#</th><th>Client</th><th>Type</th><th>Status</th></tr></thead>
-            <tbody>
-              <tr onclick="showWin('work')"><td>01</td><td>Visit Canberra</td><td>OOH/TV/Digital</td><td><span class="live-badge">LIVE</span></td></tr>
-              <tr onclick="showWin('work')"><td>02</td><td>Starbucks</td><td>Integrated</td><td>Concept</td></tr>
-              <tr onclick="showWin('work')"><td>03</td><td>Chobani</td><td>Brand Platform</td><td>Concept</td></tr>
-              <tr onclick="showWin('work')"><td>04</td><td>Burger King</td><td>Social Impact</td><td>Concept</td></tr>
-              <tr onclick="showWin('work')"><td>05</td><td>Uber Eats</td><td>Digital/Product</td><td>Concept</td></tr>
-              <tr onclick="showWin('work')"><td>06</td><td>KitKat</td><td>Activation</td><td>Concept</td></tr>
-              <tr onclick="showWin('mccain')"><td>07</td><td>McCain</td><td>Product Innov.</td><td>Concept</td></tr>
-              <tr onclick="showWin('work')"><td>08</td><td>Vanish</td><td>Print</td><td>Concept</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="panel">
-          <div class="panel-title">💾 About Dean</div>
-          <div class="panel-body">Copywriter. 5 years. Stand-up comedian. Kids book writer. Recovering ad nerd.<br><br>Honed at Ogilvy, VML, and Wunderman Thompson in Sydney. Now open for work in New York.<br><br>Idea first. Words second. Excel never.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WORK -->
-  <div class="window" id="win-work">
-    <div class="title-bar">
-      <span>📁 Work — Dean Shein</span>
-      <div class="title-bar-btns"><div class="title-bar-btn" onclick="showWin('home')">✕</div></div>
-    </div>
-    <div class="menu-bar">
-      <span class="menu-item" onclick="showWin('home')">File</span>
-      <span class="menu-item" onclick="showWin('work')">Work</span>
-      <span class="menu-item" onclick="showWin('mccain')">McCain</span>
-      <span class="menu-item" onclick="showWin('tropfest')">Tropfest</span>
-      <span class="menu-item" onclick="showWin('about')">About</span>
-    </div>
-    <div class="window-body scroll-area">
-      <table class="work-table">
-        <thead><tr><th>#</th><th>Client</th><th>Campaign</th><th>Type</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>01</td><td>Visit Canberra</td><td>There's more than they're telling you</td><td>OOH / TV / Digital</td><td><span class="live-badge">LIVE</span></td></tr>
-          <tr><td>02</td><td>Starbucks</td><td>The Real Star</td><td>Integrated Campaign</td><td>Concept</td></tr>
-          <tr><td>03</td><td>Chobani</td><td>Weirderful</td><td>Brand Platform</td><td>Concept</td></tr>
-          <tr><td>04</td><td>Burger King</td><td>The Whopping Truth</td><td>Social Impact</td><td>Concept</td></tr>
-          <tr><td>05</td><td>Uber Eats</td><td>Foodio Give-Me</td><td>Digital / Product</td><td>Concept</td></tr>
-          <tr><td>06</td><td>KitKat</td><td>KitStops</td><td>Activation</td><td>Concept</td></tr>
-          <tr onclick="showWin('mccain')"><td>07</td><td>McCain</td><td>Frozen In Time</td><td>Product Innovation</td><td>Concept</td></tr>
-          <tr><td>08</td><td>Vanish</td><td>Pencil eraser poster</td><td>Print</td><td>Concept</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- McCAIN -->
-  <div class="window" id="win-mccain">
-    <div class="title-bar">
-      <span>🍕 McCain — Frozen In Time</span>
-      <div class="title-bar-btns"><div class="title-bar-btn" onclick="showWin('work')">✕</div></div>
-    </div>
-    <div class="menu-bar">
-      <span class="menu-item" onclick="showWin('home')">File</span>
-      <span class="menu-item" onclick="showWin('work')">Work</span>
-      <span class="menu-item" onclick="showWin('mccain')">McCain</span>
-      <span class="menu-item" onclick="showWin('tropfest')">Tropfest</span>
-      <span class="menu-item" onclick="showWin('about')">About</span>
-    </div>
-    <div class="window-body scroll-area">
-      <div class="mccain-grid">
-        <div>
-          <div class="panel" style="margin-bottom:12px">
-            <div class="panel-title">💡 Insight</div>
-            <div class="panel-body">Italians visit their Nonna's to share stories and learn about Italian cuisine. But Nonna's cooking methods have become a lost art as food delivery apps and the hustle of today's world have pushed aside her culinary traditions. Nonna isn't going to be around forever.</div>
-          </div>
-          <div class="panel" style="margin-bottom:12px">
-            <div class="panel-title">🧠 Idea</div>
-            <div class="panel-body">Preserve your Nonna's pizza recipe by releasing it as its own McCain's pizza.</div>
-          </div>
-          <div class="panel">
-            <div class="panel-title">⚙️ Execution</div>
-            <div class="panel-body">Tell us your Nonna's recipe via <strong>#FrozenInTime</strong> and we'll choose favourites to bring to life. Every recipe goes into McCain's online freezer — accessible for years to come.</div>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="panel-title">📦 Nonna's Concetta's Pizza Di Bufala</div>
-          <div class="panel-body" style="font-size:11px; color:#666; margin-top:4px;">Product + packaging concept</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TROPFEST -->
-  <div class="window" id="win-tropfest">
-    <div class="title-bar">
-      <span>🎬 Tropfest — Time's Up. Dino Pus.</span>
-      <div class="title-bar-btns"><div class="title-bar-btn" onclick="showWin('home')">✕</div></div>
-    </div>
-    <div class="menu-bar">
-      <span class="menu-item" onclick="showWin('home')">File</span>
-      <span class="menu-item" onclick="showWin('work')">Work</span>
-      <span class="menu-item" onclick="showWin('mccain')">McCain</span>
-      <span class="menu-item" onclick="showWin('tropfest')">Tropfest</span>
-      <span class="menu-item" onclick="showWin('about')">About</span>
-    </div>
-    <div class="window-body scroll-area">
-      <div style="margin-bottom:12px; font-size:11px; text-transform:uppercase; letter-spacing:1px; color:#444;">Tropfest — Short Film &nbsp;|&nbsp; Writer: Dean Shein</div>
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/MvCeF3KuR6U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div style="margin-top:12px; font-size:12px; color:#444; font-style:italic;">A short film written for Tropfest — the world's largest short film festival. Because writing ads wasn't enough.</div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="window" id="win-about">
-    <div class="title-bar">
-      <span>👤 About — Dean Shein</span>
-      <div class="title-bar-btns"><div class="title-bar-btn" onclick="showWin('home')">✕</div></div>
-    </div>
-    <div class="menu-bar">
-      <span class="menu-item" onclick="showWin('home')">File</span>
-      <span class="menu-item" onclick="showWin('work')">Work</span>
-      <span class="menu-item" onclick="showWin('mccain')">McCain</span>
-      <span class="menu-item" onclick="showWin('tropfest')">Tropfest</span>
-      <span class="menu-item" onclick="showWin('about')">About</span>
-    </div>
-    <div class="window-body scroll-area">
-      <div class="about-grid">
-        <div class="panel">
-          <div class="panel-title">📝 Bio</div>
-          <div class="panel-body">Five years writing campaigns, concepts, and the occasional thing that makes a creative director cry. Shops include Ogilvy, VML, and Wunderman Thompson.<br><br>Also performs stand-up comedy and writes kids books. Both involve talking to people who aren't listening.<br><br>Idea first. Words second. Excel never.</div>
-        </div>
-        <div class="panel">
-          <div class="panel-title">ℹ️ System Info</div>
-          <div class="panel-body">
-            <div class="info-row"><span class="info-label">Based</span><span class="info-value">New York, NY</span></div>
-            <div class="info-row"><span class="info-label">Experience</span><span class="info-value">5 Years</span></div>
-            <div class="info-row"><span class="info-label">Discipline</span><span class="info-value">Copywriter</span></div>
-            <div class="info-row"><span class="info-label">Shops</span><span class="info-value">Ogilvy, VML, WT</span></div>
-            <div class="info-row"><span class="info-label">Side Projects</span><span class="info-value">Stand-up, Kids Books</span></div>
-            <div class="info-row"><span class="info-label">Status</span><span class="info-value">Open to Work</span></div>
-            <div class="info-row"><span class="info-label">Contact</span><span class="info-value">hello@deanshein.biz</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="taskbar">
-  <div class="start-btn">⊞ Start</div>
-  <div class="taskbar-divider"></div>
-  <div class="taskbar-btn active" id="tb-home" onclick="showWin('home')">Dean Shein</div>
-  <div class="taskbar-btn" id="tb-work" onclick="showWin('work')">Work</div>
-  <div class="taskbar-btn" id="tb-mccain" onclick="showWin('mccain')">McCain</div>
-  <div class="taskbar-btn" id="tb-tropfest" onclick="showWin('tropfest')">Tropfest</div>
-  <div class="taskbar-btn" id="tb-about" onclick="showWin('about')">About</div>
-  <div class="taskbar-clock" id="clock">12:00</div>
-</div>
-
-<script>
-  function showWin(id) {
-    document.querySelectorAll('.window').forEach(w => w.classList.remove('active'));
-    document.querySelectorAll('.taskbar-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('win-' + id).classList.add('active');
-    const tb = document.getElementById('tb-' + id);
-    if (tb) tb.classList.add('active');
-  }
-  function updateClock() {
-    const now = new Date();
-    document.getElementById('clock').textContent = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
-  }
-  updateClock();
-  setInterval(updateClock, 10000);
-</script>
-
-</body>
-</html>
+Idea first. Words second. Excel never.
+⊞ Start
+Dean Shein
+Work
+Canberra
+Starbucks
+KitKat
+Allen's
+Vanish
+Chobani
+Uber Eats
+BK
+Tropfest
+About
+16:04
